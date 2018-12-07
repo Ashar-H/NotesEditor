@@ -12,7 +12,6 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.MyViewHolder> implements CompoundButton.OnCheckedChangeListener{
 
@@ -54,6 +53,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
 
             holder.mCheckbox.setVisibility(View.VISIBLE);
 
+            //To prevent calling onCheckedChangedListener on scrolling
             holder.mCheckbox.setOnCheckedChangeListener(null);
 
             if (mCheckBoxState.get(position))
@@ -61,16 +61,11 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
             else
                 holder.mCheckbox.setChecked(false);
 
-
-
         }
         else{
             holder.mCheckbox.setVisibility(View.GONE);
         }
 
-        //listView is reloaded on scrolling
-        //resetting checkbox last state when the view is refreshed.
-        //holder.mCheckbox.setChecked(mCheckBoxState.get(position,false));
         holder.mCheckbox.setOnCheckedChangeListener(this);
 
     }

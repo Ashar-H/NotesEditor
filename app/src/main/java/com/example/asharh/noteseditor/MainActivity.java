@@ -38,9 +38,6 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    //comment
-    private ListView mListView;
-
 
     private RecyclerView mRecyclerView;
     private MyRecyclerViewAdapter mAdapter;
@@ -48,7 +45,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private ArrayList<Note> mList;
     public static List<Note> userSelection = new ArrayList<>();
-    //private ListViewAdapter mAdapter;
     private FloatingActionButton fab;
     public static boolean deleteActionFlag = false;
     public static ActionMode actionMode;
@@ -69,10 +65,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         fab = findViewById(R.id.fab);
         mList = new ArrayList<>();
-        /*mListView = findViewById(R.id.mListView);
-        mAdapter = new ListViewAdapter(this,mList);
-        mListView.setAdapter(mAdapter);
-        mListView.setOnItemClickListener(this);*/
 
         //RecyclerView
         mRecyclerView = findViewById(R.id.mRecyclerView);
@@ -91,12 +83,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         mList.clear();
 
-        FileHelper.deleteAll(this);
+        //Testing
+        /*FileHelper.deleteAll(this);
 
         //Create 50 notes for testing
         for (int i=0;i<50;i++){
             FileHelper.saveNote(this,new Note("Testing"+i,""+i,System.currentTimeMillis()));
-        }
+        }*/
 
 
         //Get All Saved Notes
