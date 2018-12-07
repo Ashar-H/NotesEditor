@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00bcd4</color>
+    <color name="colorPrimaryDark">#008ba3</color>
+    <color name="colorPrimaryLight">#80DEEA</color>
+    <color name="colorAccent">#ff404a</color>
+    <color name="colorAccentLight">#ff7876</color>
+
+    <!-- To remove content editText underline -->
+    <color name="Transparent">#00000000</color>
+</resources>

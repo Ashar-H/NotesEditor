@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoteActivity"
+    android:padding="12dp"
+    >
+
+
+    <TextView
+        android:id="@+id/mNoteActivityDateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:textSize="12sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        />
+
+    <EditText
+        android:id="@+id/mTitleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mNoteActivityDateTextView"
+        android:layout_marginTop="8dp"
+        android:hint="Title"
+       />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mTitleEditText">
+
+    <EditText
+        android:id="@+id/mContentEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mTitleEditText"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:hint="Note"
+        android:backgroundTint="@color/Transparent"
+        />
+
+
+</ScrollView>
+
+
+
+</RelativeLayout>
