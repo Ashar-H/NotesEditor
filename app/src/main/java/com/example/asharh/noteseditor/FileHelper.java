@@ -13,7 +13,6 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Random;
 
-
 //THIS CLASS HANDLES SAVING, UPDATING AND RETRIEVING NOTES IN APP PRIVATE DIRECTORY
 public class FileHelper {
 
