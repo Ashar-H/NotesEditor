@@ -1,6 +1,7 @@
 package com.example.asharh.noteseditor;
 
 import android.content.Context;
+import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -73,7 +74,7 @@ public class ListViewAdapter extends ArrayAdapter<Note> implements CompoundButto
     public void onCheckedChanged(CompoundButton buttonView,
                                  boolean isChecked) {
 
-       // Log.d("TAG","Value: "+isChecked+"at TAG: "+buttonView.getTag());
+       Log.d("TAG","Value: "+isChecked+"at TAG: "+buttonView.getTag());
 
         int position = (int) buttonView.getTag();
 

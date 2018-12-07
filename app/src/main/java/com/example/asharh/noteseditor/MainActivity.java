@@ -9,6 +9,8 @@ import android.support.design.widget.FloatingActionButton;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import android.view.Menu;
@@ -23,6 +25,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 import android.view.ActionMode;
 
+import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -35,10 +38,17 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
+    //comment
     private ListView mListView;
-    private List<Note> mList;
+
+
+    private RecyclerView mRecyclerView;
+    private MyRecyclerViewAdapter mAdapter;
+    private RecyclerView.LayoutManager layoutManager;
+
+    private ArrayList<Note> mList;
     public static List<Note> userSelection = new ArrayList<>();
-    private ListViewAdapter mAdapter;
+    //private ListViewAdapter mAdapter;
     private FloatingActionButton fab;
     public static boolean deleteActionFlag = false;
     public static ActionMode actionMode;
@@ -59,10 +69,19 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         fab = findViewById(R.id.fab);
         mList = new ArrayList<>();
-        mListView = findViewById(R.id.mListView);
+        /*mListView = findViewById(R.id.mListView);
         mAdapter = new ListViewAdapter(this,mList);
         mListView.setAdapter(mAdapter);
-        mListView.setOnItemClickListener(this);
+        mListView.setOnItemClickListener(this);*/
+
+        //RecyclerView
+        mRecyclerView = findViewById(R.id.mRecyclerView);
+        layoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(layoutManager);
+        mRecyclerView.setHasFixedSize(true);
+
+        mAdapter = new MyRecyclerViewAdapter(this,mList);
+        mRecyclerView.setAdapter(mAdapter);
     }
 
 
@@ -71,6 +90,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onResume();
 
         mList.clear();
+
+        FileHelper.deleteAll(this);
+
+        //Create 50 notes for testing
+        for (int i=0;i<50;i++){
+            FileHelper.saveNote(this,new Note("Testing"+i,""+i,System.currentTimeMillis()));
+        }
+
 
         //Get All Saved Notes
         for (Note note: FileHelper.getAllSavedNotes(this)){

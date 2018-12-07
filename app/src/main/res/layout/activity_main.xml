@@ -17,6 +17,15 @@
         android:id="@+id/mListView"
         />
 
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mRecyclerView"
+        >
+
+
+    </android.support.v7.widget.RecyclerView>
+
     <!-- Create New Note -->
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
