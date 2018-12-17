@@ -18,7 +18,7 @@ public class Note implements Serializable{
 
     public Note(String title, String content, long dateTime){
 
-       Log.e("Note Class","constructor");
+       //Log.d("Note Class","constructor");
 
         this.mTitle = title;
         this.mContent = content;
@@ -27,49 +27,49 @@ public class Note implements Serializable{
 
 
     public String getTitle() {
-       Log.e("Note Class","getTitle()");
+       //Log.d("Note Class","getTitle()");
         return mTitle;
     }
 
     public void setTitle(String mTitle) {
 
-       Log.e("Note Class","setTitle()");
+       //Log.d("Note Class","setTitle()");
         this.mTitle = mTitle;
     }
 
     public String getContent() {
-       Log.e("Note Class","getContent()");
+       //Log.d("Note Class","getContent()");
         return mContent;
     }
 
     public void setContent(String mContent) {
 
-       Log.e("Note Class","setContent()");
+       //Log.d("Note Class","setContent()");
         this.mContent = mContent;
     }
 
     public void setDateTime(long dateTime){
 
-       Log.e("Note Class","setDateTime()");
+       //Log.d("Note Class","setDateTime()");
         this.mDateTime = dateTime;
     }
 
     public long getDateTime() {
-       Log.e("Note Class","getDateTime()");
+       //Log.d("Note Class","getDateTime()");
         return mDateTime;
     }
 
     public String getFileName(){
-       Log.e("Note Class","getFileName()");
+       //Log.d("Note Class","getFileName()");
         return this.fileName;}
 
     public void setFileName(String fileName){
-       Log.e("Note Class","setContent()");
+       //Log.d("Note Class","setFileName()");
         this.fileName = fileName; }
 
     public String getDateTimeFormattedAsString(Context context, String format) {
 
-       Log.e("Note Class","getDateTimeFormattedAsString()-Format "+format);
+       //Log.d("Note Class","getDateTimeFormattedAsString()-Format "+format);
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format,
                 context.getResources().getConfiguration().locale);
