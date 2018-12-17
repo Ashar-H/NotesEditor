@@ -58,16 +58,6 @@ public class MainActivity extends AppCompatActivity {
     private Bundle savedInstanceState;
     private NoteFragment noteFragment;
 
-    private String msg = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer gravida vulputate massa, nec cursus eros blandit nec. Nam ut imperdiet enim. Sed tempus molestie velit vel malesuada. Aliquam erat volutpat. Proin tellus dui, dapibus id lacus quis, feugiat volutpat elit. Etiam at mi pellentesque, sagittis ligula euismod, molestie diam. Nullam in condimentum urna. Cras non erat velit. Etiam pharetra, ante vel tempus luctus, purus turpis varius nisi, scelerisque sollicitudin felis nunc a felis. Donec ac lobortis urna, sed hendrerit felis. In sit amet lorem convallis, congue arcu non, commodo erat. Donec tincidunt ultricies tempor. Integer vulputate felis quam, in pretium diam elementum malesuada. Donec mattis sapien at massa fermentum aliquet.\n" +
-            "\n" +
-            "Nullam egestas, massa a euismod consequat, odio eros ultrices quam, ac egestas enim dolor ut lorem. Vivamus laoreet ac magna vel sodales. Maecenas aliquet faucibus lacus id gravida. Fusce sollicitudin posuere ipsum a venenatis. Morbi pretium elit eu erat mattis, quis interdum ante pulvinar. Donec lectus risus, feugiat sit amet consectetur rhoncus, euismod ut metus. Proin porta molestie erat, sit amet interdum arcu aliquam nec. Nam eleifend lorem ut dapibus elementum. In sodales finibus tempor. Nulla cursus efficitur erat, in ornare lorem euismod pellentesque. Suspendisse eleifend lorem ac imperdiet aliquet. Maecenas et orci at libero mattis mollis.\n" +
-            "\n" +
-            "Vivamus non nulla a neque fringilla consectetur quis a eros. Phasellus laoreet, nulla eu feugiat efficitur, augue dui rutrum nunc, nec scelerisque mi eros ac purus. Phasellus consequat malesuada libero non bibendum. Nulla aliquam pulvinar massa, at vulputate diam. Etiam lectus ipsum, suscipit at tortor sed, fermentum bibendum magna. Sed hendrerit eu leo ac ultrices. Donec condimentum condimentum nisl, eu bibendum lectus ornare eget. Nam tincidunt id dui a viverra. Sed hendrerit nisi et velit dictum eleifend. Morbi faucibus dui mauris, vehicula malesuada ante ultricies vitae. Sed id nulla quis lectus accumsan elementum. Pellentesque convallis egestas velit sit amet mattis. Maecenas sollicitudin erat gravida dapibus egestas. Proin tempor dolor nec urna tempor auctor. Nullam massa ante, posuere in libero laoreet, finibus egestas dolor. Vivamus rhoncus lobortis nisi vel volutpat.\n" +
-            "\n" +
-            "Fusce ac consequat mi. Ut varius odio nec ultricies interdum. In orci lacus, vestibulum vel felis et, mattis eleifend nunc. Sed feugiat purus id accumsan convallis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean laoreet, neque in rhoncus tempus, turpis orci aliquam libero, ac vulputate ligula odio in enim. In blandit consectetur varius.\n" +
-            "\n" +
-            "Donec consequat id magna vel euismod. Curabitur id condimentum velit. Etiam lobortis varius pretium. Sed ultricies diam eu ante sagittis, vitae aliquam risus ornare. Ut fermentum eleifend enim eget tincidunt. Quisque eget ornare sem. Nulla consectetur porttitor malesuada. Aliquam pretium vitae mi vitae luctus.";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Create 100 notes for testing
         /*for (int i=0;i<100;i++){
-            FileHelper.saveNote(this,new Note("Note "+(i+1),msg+i,System.currentTimeMillis()));
+            FileHelper.saveNote(this,new Note("Note "+(i+1),"Testing"+i,System.currentTimeMillis()));
         }*/
 
 
